@@ -9,6 +9,9 @@ module.exports = {
       'kuning' :'#F9E400',
       'oren' : '#FFAF00',
       'merah': '#F5004F',
+      'putih': '#ffffff',
+      'warnashoope': '#EE4D2D',
+      'warnatiktok': '#040404',
     },
 
     extend: {

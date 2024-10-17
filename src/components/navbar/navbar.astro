@@ -14,33 +14,37 @@ const menuitems = [
     path: "/pricing",
   },
   {
-    title: "About",
-    path: "/about",
+    title: "Team",
+    path: "/team",
   },
   {
-    title: "Contact",
-    path: "/contact",
-  },
-  {
-    title: "Features",
+    title: "Layanan",
     path: "#",
     children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
+      { title: "Maklon", path: "/maklon" },
+      { title: "Luncy in Amet", path: "#" },
+    ],
+  },
+  {
+    title: "Produk",
+    path: "#",
+    children: [
+      { title: "Luncy", path: "/produk/luncy" },
+      { title: "Luncy in Amet", path: "#" },
+      { title: "Smooth Love", path: "#" },
+      { title: "Scadal Women", path: "/404" },
     ],
   },
 ];
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+  <header class="flex flex-col lg:flex-row justify-between items-center my-5 ">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-ungu">Tera</span><span
-            class="text-oren font-bold">Cendani</span
+          ><span class="font-bold text-ungu text-3xl">Tera</span><span
+            class="text-oren font-bold text-3xl">Cendani</span
           >
         </a>
         <div class="block lg:hidden">
@@ -48,14 +52,16 @@ const menuitems = [
         </div>
       </div>
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-        <ul class="flex flex-col lg:flex-row lg:gap-3">
+        <ul class="flex flex-col lg:flex-row lg:gap-3 ">
           {
             menuitems.map((item, index) => (
               <>
                 {item.children && (
                   <Dropdown
                     title={item.title}
+                    
                     children={item.children}
+                    
                     lastItem={index === menuitems.length - 1}
                   />
                 )}
@@ -78,7 +84,7 @@ const menuitems = [
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
+        <div class="lg:hidden flex items-center mt-3 gap-4 bg">
           <Link href="#" style="muted" block size="md">Log in</Link>
           <Link href="#" size="md" block>Sign up</Link>
         </div>
