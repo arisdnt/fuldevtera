@@ -1,17 +1,39 @@
-<div class="font-sans tracking-wide max-lg:max-w-2xl mx-auto pt-20 min-h-screen my-auto">
+---
+import { Picture } from "astro:assets";
+import gambar1 from "@assets/produk/luncy/1.png";
+import gambar2 from "@assets/produk/luncy/2.png";
+import gambar3 from "@assets/produk/luncy/3.png";
+
+---
+
+<div class="mb-32">
+  
+</div>
+<div class="font-sans tracking-wide max-lg:max-w-2xl mx-auto pt min-h-screen my-auto">
     <div class="grid items-start grid-cols-1 lg:grid-cols-2 gap-10">
         <div class="space-y-4 text-center lg:sticky top-8">
-            <div class="bg-gray-100 p-4 flex items-center sm:h-[380px] rounded-lg">
-                <img src="https://readymadeui.com/images/product14.webp" alt="Product" class="w-full max-h-full object-contain object-top" />
+            <div class="bg-kuning p-5 flex items-center sm:h-[380px] rounded-lg">
+
+                <Picture
+                src={gambar1}
+                alt="produk luncy"
+                 />
+
             </div>
 
             <div class="grid grid-cols-2 gap-4">
                 <div class="bg-gray-100 p-4 flex items-center rounded-lg sm:h-[182px]">
-                    <img src="https://readymadeui.com/images/product12.webp" alt="Product" class="w-full max-h-full object-contain object-top" />
+                    <Picture
+                    src={gambar2}
+                    alt="produk luncy"
+                  />
                 </div>
 
                 <div class="bg-gray-100 p-4 flex items-center rounded-lg sm:h-[182px]">
-                    <img src="https://readymadeui.com/images/product9.webp" alt="Product" class="w-full max-h-full object-contain object-top" />
+                    <Picture
+                    src={gambar3}
+                    alt="produk luncy"
+                  />
                 </div>
             </div>
         </div>
